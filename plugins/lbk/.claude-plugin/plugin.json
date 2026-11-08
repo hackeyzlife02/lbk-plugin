@@ -1,0 +1,22 @@
+{
+  "name": "lbk",
+  "version": "0.3.0",
+  "description": "See your Lutz Bath & Kitchen jobs and quotes, and look up products with manufacturer list prices, without emailing the showroom.",
+  "author": {
+    "name": "Lutz Bath & Kitchen",
+    "email": "showroom@lbksf.com",
+    "url": "https://www.lbksf.com"
+  },
+  "homepage": "https://www.lbksf.com/trade",
+  "privacyPolicyUrl": "https://www.lbksf.com/connect/privacy",
+  "license": "UNLICENSED",
+  "keywords": [
+    "lbk",
+    "lutz",
+    "bath",
+    "kitchen",
+    "trade",
+    "quotes",
+    "pricing"
+  ]
+}

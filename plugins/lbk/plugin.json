@@ -1,0 +1,50 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "lbk",
+  "version": "0.3.0",
+  "description": "Lutz Bath & Kitchen for trade clients: your LBK jobs and quotes, and product search across about 5.8 million bath and kitchen products with manufacturer list prices, right in ChatGPT.",
+  "author": {
+    "name": "Lutz Bath & Kitchen",
+    "email": "showroom@lbksf.com",
+    "url": "https://www.lbksf.com"
+  },
+  "homepage": "https://www.lbksf.com/connect/start",
+  "license": "Proprietary",
+  "keywords": [
+    "lbk",
+    "lutz",
+    "bath",
+    "kitchen",
+    "plumbing",
+    "showroom",
+    "trade",
+    "quotes",
+    "fixtures",
+    "list-price"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Lutz Bath & Kitchen",
+        "shortDescription": "Your LBK jobs, quotes and products",
+        "longDescription": "For Lutz Bath & Kitchen trade clients. See your own LBK jobs and quotes, and search about 5.8 million bath and kitchen products: faucets, showers, tubs, sinks, toilets and hardware, with manufacturer list prices, specs, dimensions, finishes, spec sheets and whether LBK carries the brand. Read-only: quote changes, orders, delivery dates and trade pricing go through the showroom.",
+        "developerName": "Lutz Bath & Kitchen",
+        "category": "Productivity",
+        "capabilities": [
+          "Read"
+        ],
+        "websiteURL": "https://www.lbksf.com",
+        "privacyPolicyURL": "https://www.lbksf.com/connect/privacy",
+        "defaultPrompt": [
+          "What's on my latest Lutz Bath & Kitchen quote?",
+          "Do you carry Vola? What's close to it in brushed brass?",
+          "Find a 60 by 30 alcove tub with a left-hand drain."
+        ],
+        "brandColor": "#002147",
+        "composerIcon": "./assets/icon.png",
+        "logo": "./assets/logo.png"
+      },
+      "onboardingSkill": "./skills/lbk-showroom/SKILL.md"
+    }
+  }
+}
