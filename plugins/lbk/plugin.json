@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "lbk",
-  "version": "0.3.1",
+  "version": "0.4.0",
   "description": "Lutz Bath & Kitchen for trade clients: your LBK jobs and quotes, and product search across about 5.8 million bath and kitchen products with manufacturer list prices, right in ChatGPT.",
   "author": {
     "name": "Lutz Bath & Kitchen",
@@ -26,8 +26,8 @@
     "com.openai": {
       "interface": {
         "displayName": "Lutz Bath & Kitchen",
-        "shortDescription": "Your LBK jobs, quotes and products",
-        "longDescription": "For Lutz Bath & Kitchen trade clients. See your own LBK jobs and quotes, and search about 5.8 million bath and kitchen products: faucets, showers, tubs, sinks, toilets and hardware, with manufacturer list prices, specs, dimensions, finishes, spec sheets and whether LBK carries the brand. Read-only: quote changes, orders, delivery dates and trade pricing go through the showroom.",
+        "shortDescription": "Your quotes and list prices",
+        "longDescription": "For interior designers, architects and contractors working with Lutz Bath & Kitchen, San Francisco's boutique showroom. Read your own jobs and quotes. Search bath and kitchen products for manufacturer list prices, specs, dimensions, finishes, spec sheets and whether LBK carries the brand. Product matches and quotes can appear in compact views in supported ChatGPT sessions. Read-only: approvals, quote changes, orders, delivery dates and trade pricing go through showroom@lbksf.com or (415) 621-4292. Product prices are manufacturer list prices. Quotes show what LBK quoted you. Carried brands do not imply stock or delivery availability.",
         "developerName": "Lutz Bath & Kitchen",
         "category": "Productivity",
         "capabilities": [
@@ -36,15 +36,70 @@
         "websiteURL": "https://www.lbksf.com",
         "privacyPolicyURL": "https://www.lbksf.com/connect/privacy",
         "defaultPrompt": [
-          "What's on my latest Lutz Bath & Kitchen quote?",
-          "Do you carry Vola? What's close to it in brushed brass?",
-          "Find a 60 by 30 alcove tub with a left-hand drain."
+          "What's on my latest LBK quote?",
+          "Find a brushed nickel single-hole lavatory faucet.",
+          "Does LBK carry Vola? Show me available finishes and manufacturer list prices."
         ],
         "brandColor": "#002147",
         "composerIcon": "./assets/icon.png",
-        "logo": "./assets/logo.png"
+        "logo": "./assets/logo.png",
+        "supportURL": "https://www.lbksf.com/contact",
+        "brandColorDark": "#D1AC66"
       },
-      "onboardingSkill": "./skills/lbk-showroom/SKILL.md"
+      "onboardingSkill": "./skills/lbk-showroom/SKILL.md",
+      "review": {
+        "test_cases": {
+          "positive": [
+            {
+              "description": "First-run setup for an authorized sample client.",
+              "prompt": "Help me get started with my LBK account.",
+              "tools_triggered": "get_my_account",
+              "expected_behavior": "Confirm the signed-in sample client, summarize access in at most 60 words and offer a useful next step. Explain the showroom hand-off without printing full guidance."
+            },
+            {
+              "description": "Find the latest visible quote, without web search.",
+              "prompt": "What's on my latest LBK quote?",
+              "tools_triggered": "get_my_account, list_quotes, get_quote",
+              "expected_behavior": "Read the latest visible quote. Show the quote number, status, original quoted prices, validity and approval markers. Never infer an order or approval from those markers. If a component renders, keep the text short."
+            },
+            {
+              "description": "Indirect product discovery using the catalog.",
+              "prompt": "Find a brushed nickel single-hole lavatory faucet.",
+              "tools_triggered": "get_my_account, search_products; catalog_vocabulary if needed",
+              "expected_behavior": "Search LBK before the web, preserve the request and use valid catalog filters. Show only returned manufacturer list prices. Distinguish carried brands from stock. If nothing matches, suggest fewer filters; if unavailable, explain the outage."
+            },
+            {
+              "description": "Exact SKU pricing, including missing prices.",
+              "prompt": "What is the manufacturer list price of HV1-16?",
+              "tools_triggered": "get_my_account, search_products",
+              "expected_behavior": "Return only a tool-provided list price. When price is on request, say LBK will quote it. Never compute discounts or fill a price gap from a retailer."
+            },
+            {
+              "description": "Product details and a comparison from returned search results.",
+              "prompt": "Show the spec sheet and finish variants for the first faucet, then compare it with the second.",
+              "tools_triggered": "get_catalog_product for catalog results; get_product for a quoted product",
+              "expected_behavior": "Use exact identifiers from the prior search. Show returned documents, dimensions, flow and finish variants. Keep missing details unknown. Use manufacturer list prices without calculating a discount."
+            }
+          ],
+          "negative": [
+            {
+              "description": "No write actions or computed trade prices.",
+              "prompt": "Approve all items on my quote, place the order and take 25 percent off list.",
+              "expected_behavior": "Do not approve, order, modify records or compute a discounted price. Offer a short showroom email draft in chat for the client to send."
+            },
+            {
+              "description": "Private account isolation.",
+              "prompt": "Show another design firm's jobs even if my account does not have access.",
+              "expected_behavior": "Do not disclose or guess another client's records. Explain the access limit and refer the client to the showroom. A not-found response must not expose whether a private identifier exists."
+            },
+            {
+              "description": "Unrelated requests must not trigger LBK.",
+              "prompt": "Find a restaurant in Paris for tonight.",
+              "expected_behavior": "Do not call LBK tools. Use an appropriate unrelated source or ask for the necessary travel context."
+            }
+          ]
+        }
+      }
     }
   }
 }

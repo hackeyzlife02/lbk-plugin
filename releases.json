@@ -2,6 +2,12 @@
   "about": "Every published version of the LBK client plugin. Any change to the plugin's files needs a new version and a new entry here (src/__tests__/plugin-release.test.ts enforces it), then client-plugin/publish.sh. Clients who added the marketplace (hackeyzlife02/lbk-plugin) get it automatically; anyone who uploaded the plugin file has to upload the new one. Rules for assistants are not plugin changes: they live in src/mcp/guidance.ts and reach every client on the next deploy.",
   "releases": [
     {
+      "version": "0.4.0",
+      "date": "2026-11-08",
+      "sha256": "0d96f04585d2fc1a59f47783b60713c01432dd7bdf95d8a81c58429f3c984d6f",
+      "changes": "ChatGPT listing: shorter subtitle, three task-based starter prompts, support link, dark brand accent, and five positive plus three negative review cases. Optional compact product and quote views require connector 0.5.0 and a UI-capable host. The skill remains thin and defers to live connector guidance."
+    },
+    {
       "version": "0.3.1",
       "date": "2026-11-07",
       "sha256": "332d43af35828fbe8f29217e1a430efcf7fddb51202a8808e623e574bcf92ae7",

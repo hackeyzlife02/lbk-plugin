@@ -7,14 +7,14 @@
   },
   "metadata": {
     "description": "Lutz Bath & Kitchen for trade clients: your jobs and quotes, and product search with manufacturer list prices, right in your assistant.",
-    "version": "0.3.1"
+    "version": "0.4.0"
   },
   "plugins": [
     {
       "name": "lbk",
       "source": "./plugins/lbk",
       "description": "See your Lutz Bath & Kitchen jobs and quotes, and look up products with manufacturer list prices, without emailing the showroom.",
-      "version": "0.3.1",
+      "version": "0.4.0",
       "author": {
         "name": "Lutz Bath & Kitchen",
         "email": "showroom@lbksf.com"
