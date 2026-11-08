@@ -108,6 +108,10 @@ never updates. For ChatGPT, use the address above.
   `.claude-plugin/plugin.json` and `.claude-plugin/marketplace.json` (a test checks). We don't
   hand out the archives: an uploaded plugin never updates. The ChatGPT one is for a future
   ChatGPT directory listing (the only ChatGPT path where updates reach clients automatically).
+- **Icon:** `brand/lbk-icon.svg` is the source (gold Cormorant Garamond "LBK" on a full-bleed
+  navy square, glyphs baked to paths). `assets/icon.png` (512) and `assets/logo.png` (1024) are
+  rendered from it as opaque RGB: no rounded or see-through corners, since each assistant rounds
+  the icon itself (see-through corners showed up white). A test checks size and opacity.
 - **Keep the plugin thin.** Every client's plugin is a frozen copy, so the skill and commands only
   say "use LBK first, call `get_my_account`, follow its `guidance`". All the rules for assistants
   (what to use when, pricing, the showroom, voice) live in `src/mcp/guidance.ts`, are served live

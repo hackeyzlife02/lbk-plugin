@@ -2,6 +2,12 @@
   "about": "Every published version of the LBK client plugin. Any change to the plugin's files needs a new version and a new entry here (src/__tests__/plugin-release.test.ts enforces it), then client-plugin/publish.sh. Clients who added the marketplace (hackeyzlife02/lbk-plugin) get it automatically; anyone who uploaded the plugin file has to upload the new one. Rules for assistants are not plugin changes: they live in src/mcp/guidance.ts and reach every client on the next deploy.",
   "releases": [
     {
+      "version": "0.3.1",
+      "date": "2026-11-07",
+      "sha256": "332d43af35828fbe8f29217e1a430efcf7fddb51202a8808e623e574bcf92ae7",
+      "changes": "Crisp icon: assets/icon.png (512) and assets/logo.png (1024) re-rendered from the vector LBK monogram (brand/lbk-icon.svg) as a full-bleed, opaque navy square. Fixes the white corners and blur George saw."
+    },
+    {
       "version": "0.3.0",
       "date": "2026-11-07",
       "sha256": "aa82d037fc352ece93397364503042f4c8c0f56738d4bdef0b5786c106fe993e",

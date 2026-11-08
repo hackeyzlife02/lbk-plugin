@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "lbk",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Lutz Bath & Kitchen for trade clients: your LBK jobs and quotes, and product search across about 5.8 million bath and kitchen products with manufacturer list prices, right in ChatGPT.",
   "author": {
     "name": "Lutz Bath & Kitchen",
