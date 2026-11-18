@@ -6,8 +6,11 @@ showroom:
 - **Quotes**: every quote on your jobs, with line items, status and valid-until dates
 - **Jobs**: what's quoted on each job, room by room, and what still needs your approval
 - **Products**: search by SKU, model number or description, with specs and manufacturer list price
+- **Add to quote**: when LBK turns it on for you, ask your assistant to add a product to one of your
+  quotes. LBK reviews it and sends an updated quote
 
-Access is read-only and by invitation. Your LBK contact turns it on for your email and chooses which
+Access is by invitation and read-only, except add-to-quote requests, which LBK reviews before
+anything changes on your quote. Your LBK contact turns access on for your email and chooses which
 jobs you see.
 
 ---

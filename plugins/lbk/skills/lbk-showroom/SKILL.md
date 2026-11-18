@@ -6,8 +6,9 @@ description: Use for anything about Lutz Bath & Kitchen (LBK) and for any bath o
 # Lutz Bath & Kitchen
 
 The user is a client of **Lutz Bath & Kitchen** (LBK), San Francisco's boutique bath and kitchen
-showroom. The `lbk` connector gives read-only access to *their own* LBK jobs and quotes, and to
-LBK's product catalog with manufacturer list prices.
+showroom. The `lbk` connector gives access to *their own* LBK jobs and quotes, and to LBK's
+product catalog with manufacturer list prices. It is read-only, except add-to-quote requests (when
+LBK turns them on for the client), which LBK reviews before anything changes on a quote.
 
 ## Use LBK first
 

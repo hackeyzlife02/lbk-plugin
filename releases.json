@@ -2,6 +2,18 @@
   "about": "Every published version of the LBK client plugin. Any change to the plugin's files needs a new version and a new entry here (src/__tests__/plugin-release.test.ts enforces it), then client-plugin/publish.sh. Clients who added the marketplace (hackeyzlife02/lbk-plugin) get it automatically; anyone who uploaded the plugin file has to upload the new one. Rules for assistants are not plugin changes: they live in src/mcp/guidance.ts and reach every client on the next deploy.",
   "releases": [
     {
+      "version": "0.5.1",
+      "date": "2026-11-18",
+      "sha256": "40f1481472b6773eb27bd5e3fb2ce3ec8ce5e3f91db95cd191a81f014c315d4a",
+      "changes": "Adds README.md inside the plugin folder (plugins/lbk). Anthropic's directory blocks a plugin folder without one and shows it as the listing text: what the plugin does, who can use it, how to install it, what it contains (the connector, the skill, two commands; nothing runs locally) and a data summary that matches lbksf.com/connect/privacy. No behavior change. First marketplace release since 0.4.0, so it also carries 0.5.0 (add-to-quote wording)."
+    },
+    {
+      "version": "0.5.0",
+      "date": "2026-11-08",
+      "sha256": "a3d8805e4402bbbe91f0ede9ea46dd8d896627cae72f25d7b055e3c074599cea",
+      "changes": "Add to quote: the listing, skill and README now say the connector is read-only except add-to-quote requests (when LBK turns them on for a client), which LBK reviews before anything changes on a quote. The no-approvals review case allows those requests. Requires connector 0.7.0. The skill stays thin; the add-to-quote rules live in the connector's guidance."
+    },
+    {
       "version": "0.4.0",
       "date": "2026-11-08",
       "sha256": "0d96f04585d2fc1a59f47783b60713c01432dd7bdf95d8a81c58429f3c984d6f",
