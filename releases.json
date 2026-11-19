@@ -2,6 +2,12 @@
   "about": "Every published version of the LBK client plugin. Any change to the plugin's files needs a new version and a new entry here (src/__tests__/plugin-release.test.ts enforces it), then client-plugin/publish.sh. Clients who added the marketplace (hackeyzlife02/lbk-plugin) get it automatically; anyone who uploaded the plugin file has to upload the new one. Rules for assistants are not plugin changes: they live in src/mcp/guidance.ts and reach every client on the next deploy.",
   "releases": [
     {
+      "version": "0.5.2",
+      "date": "2026-11-19",
+      "sha256": "ca3fc858acb6a051c13239277c7a4b54ad83dc8cdf0cbf932436ca21119c5924",
+      "changes": "Names drain searches and lower-cost and finish-matched fixture options in the showroom skill. Brand-specific recommendations come from the connector’s live guidance."
+    },
+    {
       "version": "0.5.1",
       "date": "2026-11-18",
       "sha256": "40f1481472b6773eb27bd5e3fb2ce3ec8ce5e3f91db95cd191a81f014c315d4a",

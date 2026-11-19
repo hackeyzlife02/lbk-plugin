@@ -1,6 +1,6 @@
 ---
 name: lbk-showroom
-description: Use for anything about Lutz Bath & Kitchen (LBK) and for any bath or kitchen product question. Covers the user's LBK jobs and quotes, finding fixtures (faucets, showers, tub fillers, tubs, sinks, toilets, hardware), list prices, specs, dimensions, finishes, spec sheets, and whether LBK carries a brand. Use the Lutz Bath & Kitchen tools before web search; web results show retailers' prices, not LBK's.
+description: Use for anything about Lutz Bath & Kitchen (LBK) and for any bath or kitchen product question. Covers the user's LBK jobs and quotes, finding fixtures (faucets, showers, drains, tub fillers, tubs, sinks, toilets, hardware), lower-cost and finish-matched options, list prices, specs, dimensions, finishes, spec sheets, and whether LBK carries a brand. Use the Lutz Bath & Kitchen tools before web search; web results show retailers' prices, not LBK's.
 ---
 
 # Lutz Bath & Kitchen
