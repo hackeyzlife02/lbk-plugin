@@ -70,10 +70,11 @@ any time.
 
 ### Add the LBK plugin (Claude, optional)
 
-The connector address above is all you need, and it always gives you LBK's latest: how your
-assistant should answer comes from LBK each time you start a conversation. The plugin adds a skill
-that reminds Claude to check LBK first for any bath or kitchen product question, plus the
-`/lbk:quotes` and `/lbk:price` commands. Add it from our marketplace so it keeps itself up to date:
+The connector address above is all you need: it gives your assistant LBK's tools, what each one
+does and LBK's basic rules (list prices only, what goes through the showroom). The plugin adds
+LBK's full answering guide as a skill (which tool answers what, prices, quotes, exports, add-to-quote
+requests and LBK's brands), plus the `/lbk:quotes` and `/lbk:price` commands. Add it from our
+marketplace so it keeps itself up to date:
 
 - **Claude** (claude.ai or the desktop app): **Customize** → **Plugins** → **Add** →
   **Add marketplace** → enter `hackeyzlife02/lbk-plugin` → add **lbk**, then turn on
@@ -115,13 +116,17 @@ never updates. For ChatGPT, use the address above.
   navy square, glyphs baked to paths). `assets/icon.png` (512) and `assets/logo.png` (1024) are
   rendered from it as opaque RGB: no rounded or see-through corners, since each assistant rounds
   the icon itself (see-through corners showed up white). A test checks size and opacity.
-- **Keep the plugin thin.** Every client's plugin is a frozen copy, so the skill and commands only
-  say "use LBK first, call `get_my_account`, follow its `guidance`". All the rules for assistants
-  (what to use when, pricing, the showroom, voice) live in `src/mcp/guidance.ts`, are served live
-  in `get_my_account`, and reach every client on the next connector deploy. Change rules there,
-  not here.
-- **When clients need to update:** only when the plugin's own files change (say, a new command or
-  a new connector address). `src/__tests__/plugin-release.test.ts` fails on any such change until
+- **Where the rules live (since plugin 0.6.0, connector 0.11.0).** Anthropic's Software Directory
+  Policy (2.F) forbids instructional software that has the assistant pull behavioral rules from an
+  external source at run time, so a tool result no longer carries rules. The detailed answering
+  guide (which tool when, pricing, quotes, exports, add-to-quote, brands, voice) is the skill
+  `skills/lbk-showroom/SKILL.md`, readable by anyone. The connector's tool descriptions say what
+  each tool does and when to call it, its server instructions are a short factual overview plus the
+  client-safety rules, and `get_my_account` returns facts only (including LBK's brand lists as
+  data). Nothing anywhere tells the assistant to follow rules from a tool result or to override
+  other instructions, plugins or skills; `src/__tests__/directory-policy.test.ts` checks it.
+- **When clients need to update:** whenever the plugin's own files change (a skill rule, a command,
+  a new connector address). A rule change is now a plugin release. `src/__tests__/plugin-release.test.ts` fails on any such change until
   the version is bumped and the change is logged in `releases.json`. Marketplace installs with sync
   on then update by themselves after the next publish.
 - **Publishing** (owner-gated): this directory is a self-contained plugin marketplace with no

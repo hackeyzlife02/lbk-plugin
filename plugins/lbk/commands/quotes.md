@@ -5,7 +5,8 @@ argument-hint: "[job name, optional]"
 
 Using the `lbk` connector, summarize my quotes. If I named a job ("$ARGUMENTS"), cover just that job.
 
-Call `get_my_account` first if you haven't in this conversation, and follow its `guidance`. Then
-use `list_jobs` and `list_quotes`, and group the quotes by job: number, title, status, total and
-valid-until date. Flag anything that expires in the next 14 days. For open quotes, use `get_quote`
-and list the items that still need my approval.
+Use `list_jobs` and `list_quotes`, and group the quotes by job: title, status, total and
+valid-until date, with the quote number only when it helps tell quotes apart. Flag anything that
+expires in the next 14 days. For open quotes, use `get_quote` and list the items marked as needing
+my approval (a marker, not approval history: the showroom confirms approvals). Say which version
+each quote is.

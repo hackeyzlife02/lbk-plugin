@@ -9,6 +9,8 @@ instead of emailing the showroom.
 - **Your quotes and jobs**: read your own LBK jobs and published quotes, room by room: line items,
   the prices LBK quoted you, status, approvals, valid-until dates and earlier versions.
 - **Export a quote**: as an LBK PDF, a Studio Designer import file, or an Excel file for Programa.
+- **Spec sheets and installation instructions**: one PDF for a quote, room by room, with a link you
+  can pass to your contractor. It has no prices.
 - **Products**: search bath and kitchen products by SKU, model number or description, with specs,
   finishes, spec sheets, manufacturer list prices and whether LBK carries the brand.
 - **Add to quote**: when LBK turns it on for you, ask Claude to add a product to one of your quotes.
@@ -39,8 +41,9 @@ you see. Setup guide: https://www.lbksf.com/connect/start
 - **Connector** `lbk`: LBK's remote MCP server at `https://connect.lbksf.com/mcp`. When you connect,
   LBK's sign-in opens: enter your email, type the 6-digit code LBK emails you, then choose
   **Allow**. There is no password.
-- **Skill** `lbk-showroom`: tells Claude to use the LBK tools for your LBK quotes and for bath and
-  kitchen product questions.
+- **Skill** `lbk-showroom`: LBK's guide for Claude, in plain text you can read: which LBK tool
+  answers what, how to quote prices (manufacturer list prices only, never computed), how to handle
+  exports and add-to-quote requests, and what goes through the showroom.
 - **Commands** `/lbk:quotes` (summarize your quotes) and `/lbk:price` (look up a product and its
   list price).
 
@@ -51,6 +54,7 @@ comes from LBK's connector over HTTPS, and it sends nothing anywhere else.
 
 The connector keeps your access (email, name, firm and the jobs LBK shared with you), a record of
 each request your assistant makes to it, your product searches, and short-lived sign-in records.
+A spec sheets PDF you make is kept for 90 days, and anyone with its link can open it.
 It never stores passwords, payment details or your conversations. LBK staff use this to support your
 access and improve product recommendations. Full details: https://www.lbksf.com/connect/privacy
 
