@@ -15,10 +15,13 @@ instead of emailing the showroom.
   finishes, spec sheets, manufacturer list prices and whether LBK carries the brand.
 - **Add to quote**: when LBK turns it on for you, ask Claude to add a product to one of your quotes.
   LBK reviews every request before anything changes on your quote.
+- **Invoices and payments**: when LBK turns them on for you, see your invoices, the items on them and
+  your payments and credits, pay an open invoice on QuickBooks' secure page, and download everything
+  as a PDF or Excel file.
 
 Product prices are manufacturer list prices. Your quotes show what LBK quoted you. Approvals,
-orders, delivery dates and trade pricing go through the showroom: showroom@lbksf.com or
-(415) 621-4292.
+orders, delivery dates, trade pricing and billing questions go through the showroom:
+showroom@lbksf.com or (415) 621-4292.
 
 ## Who can use it
 
@@ -43,7 +46,7 @@ you see. Setup guide: https://www.lbksf.com/connect/start
   **Allow**. There is no password.
 - **Skill** `lbk-showroom`: LBK's guide for Claude, in plain text you can read: which LBK tool
   answers what, how to quote prices (manufacturer list prices only, never computed), how to handle
-  exports and add-to-quote requests, and what goes through the showroom.
+  exports, add-to-quote requests and invoices, and what goes through the showroom.
 - **Commands** `/lbk:quotes` (summarize your quotes) and `/lbk:price` (look up a product and its
   list price).
 
@@ -55,7 +58,9 @@ comes from LBK's connector over HTTPS, and it sends nothing anywhere else.
 The connector keeps your access (email, name, firm and the jobs LBK shared with you), a record of
 each request your assistant makes to it, your product searches, and short-lived sign-in records.
 A spec sheets PDF you make is kept for 90 days, and anyone with its link can open it.
-It never stores passwords, payment details or your conversations. LBK staff use this to support your
+If LBK turns on invoices and payments for you, it keeps a copy of your LBK invoices, the items on
+them, your payments and credits, refreshed about every hour and deleted when LBK turns it off.
+It never stores passwords, card or bank numbers, or your conversations. LBK staff use this to support your
 access and improve product recommendations. Full details: https://www.lbksf.com/connect/privacy
 
 To disconnect, remove Lutz Bath & Kitchen in Claude's settings. To have your access removed, email

@@ -8,6 +8,8 @@ showroom:
 - **Products**: search by SKU, model number or description, with specs and manufacturer list price
 - **Add to quote**: when LBK turns it on for you, ask your assistant to add a product to one of your
   quotes. LBK reviews it and sends an updated quote
+- **Invoices and payments**: when LBK turns them on for you, your invoices, the items on them and
+  your payments, with a PDF or Excel file of everything
 
 Access is by invitation and read-only, except add-to-quote requests, which LBK reviews before
 anything changes on your quote. Your LBK contact turns access on for your email and chooses which
@@ -73,7 +75,7 @@ any time.
 The connector address above is all you need: it gives your assistant LBK's tools, what each one
 does and LBK's basic rules (list prices only, what goes through the showroom). The plugin adds
 LBK's full answering guide as a skill (which tool answers what, prices, quotes, exports, add-to-quote
-requests and LBK's brands), plus the `/lbk:quotes` and `/lbk:price` commands. Add it from our
+requests, invoices and LBK's brands), plus the `/lbk:quotes` and `/lbk:price` commands. Add it from our
 marketplace so it keeps itself up to date:
 
 - **Claude** (claude.ai or the desktop app): **Customize** → **Plugins** → **Add** →

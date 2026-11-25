@@ -2,6 +2,12 @@
   "about": "Every published version of the LBK client plugin. Any change to the plugin's files needs a new version and a new entry here (src/__tests__/plugin-release.test.ts enforces it), then client-plugin/publish.sh. Clients who added the marketplace (hackeyzlife02/lbk-plugin) get it automatically; anyone who uploaded the plugin file has to upload the new one. Since 0.6.0 the skill holds LBK's answering rules (Anthropic Software Directory Policy 2.F: no rules pulled from a tool result at run time), so a rule change is a plugin release.",
   "releases": [
     {
+      "version": "0.8.0",
+      "date": "2026-11-25",
+      "sha256": "1b5e5697bba99b088dc1bc87e05b5cae833d9468dc9504e33cea061c92622d18",
+      "changes": "Invoices and payments: a new Invoices and payments section in the lbk-showroom skill (list_invoices, get_invoice and export_billing work only when LBK has turned them on for the client; amounts as written and sums only from totals or matchingTotals; as-of times and the payments_lag, stale, truncated and overdue_partial warnings; a pay link only for an open invoice and only the payUrl get_invoice returns; export_billing as a PDF for everything purchased with receipts; disputes, refunds, payment changes and tax go to the showroom; deposits, refund receipts and journal entries aren't in the records). Which tool for what and What goes through the showroom cover them. The README lists the feature and says what the connector keeps when invoices are on. Requires connector 0.13.0."
+    },
+    {
       "version": "0.7.0",
       "date": "2026-11-25",
       "sha256": "803802e85d64412c45065e56360960eef2b3e0f69cfc54ed7d3f4d67a5735b81",
