@@ -9,8 +9,8 @@ instead of emailing the showroom.
 - **Your quotes and jobs**: read your own LBK jobs and published quotes, room by room: line items,
   the prices LBK quoted you, status, approvals, valid-until dates and earlier versions.
 - **Export a quote**: as an LBK PDF, a Studio Designer import file, or an Excel file for Programa.
-- **Spec sheets and installation instructions**: one PDF for a quote, room by room, with a link you
-  can pass to your contractor. It has no prices.
+- **Spec sheets and installation instructions**: a link you can pass to your contractor. It opens a
+  page with each room's products and their documents, the whole PDF and a PDF per room. No prices.
 - **Products**: search bath and kitchen products by SKU, model number or description, with specs,
   finishes, spec sheets, manufacturer list prices and whether LBK carries the brand.
 - **Add to quote**: when LBK turns it on for you, ask Claude to add a product to one of your quotes.
@@ -57,7 +57,8 @@ comes from LBK's connector over HTTPS, and it sends nothing anywhere else.
 
 The connector keeps your access (email, name, firm and the jobs LBK shared with you), a record of
 each request your assistant makes to it, your product searches, and short-lived sign-in records.
-A spec sheets PDF you make is kept for 90 days, and anyone with its link can open it.
+A spec sheets link you make (its page, PDFs, documents and small product pictures) is kept for 90
+days, and anyone with the link can open it.
 If LBK turns on invoices and payments for you, it keeps a copy of your LBK invoices, the items on
 them, your payments and credits, refreshed about every hour and deleted when LBK turns it off.
 It never stores passwords, card or bank numbers, or your conversations. LBK staff use this to support your
