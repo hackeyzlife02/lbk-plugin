@@ -2,6 +2,12 @@
   "about": "Every published version of the LBK client plugin. Any change to the plugin's files needs a new version and a new entry here (src/__tests__/plugin-release.test.ts enforces it), then client-plugin/publish.sh. Clients who added the marketplace (hackeyzlife02/lbk-plugin) get it automatically; anyone who uploaded the plugin file has to upload the new one. Since 0.6.0 the skill holds LBK's answering rules (Anthropic Software Directory Policy 2.F: no rules pulled from a tool result at run time), so a rule change is a plugin release.",
   "releases": [
     {
+      "version": "0.9.0",
+      "date": "2026-11-25",
+      "sha256": "a9526f18580bbbee707eb639da5efa23fcf43242086d66dac11335ac38aa915a",
+      "changes": "Quote pages for your clients: a new section in the lbk-showroom skill (create_quote_page, update_quote_page, list_quote_pages and manage_quote_page_link: the client's own priced version of a published LBK quote for their customer, their cost times their markup worked out by the connector, on a 90-day link and a PDF; ask the markup when it's missing; present the preview as a room table with Your cost, Client price and Your margin; never compute prices; never put the client's cost in anything meant for their customer; versions for a contractor go to export_spec_package). Which tool for what, Prices and What goes through the showroom cover them. The README lists the feature and what a quote page keeps. Requires connector 0.14.0."
+    },
+    {
       "version": "0.8.1",
       "date": "2026-11-25",
       "sha256": "b1bf76dc618c64603545670777eff145b99c8325546094450cade03cf230c409",
