@@ -18,8 +18,8 @@ instead of emailing the showroom.
   finishes, spec sheets, manufacturer list prices and whether LBK carries the brand.
 - **Add to quote**: when LBK turns it on for you, ask Claude to add a product to one of your quotes.
   LBK reviews every request before anything changes on your quote.
-- **Invoices and payments**: when LBK turns them on for you, see your invoices, the items on them and
-  your payments and credits, pay an open invoice on QuickBooks' secure page, and download everything
+- **Invoices and payments**: when LBK turns them on for you, see the invoices on your LBK projects, the
+  items on them and the payments and credits for them, pay an open invoice on QuickBooks' secure page, and download everything
   as a PDF or Excel file.
 
 Product prices are manufacturer list prices. Your quotes show what LBK quoted you. Approvals,
@@ -65,8 +65,8 @@ days, and anyone with the link can open it.
 A quote page you make keeps its settings (which quote, your markup and display choices) until about
 90 days after its link expires, or until you delete it. Anyone with its link can open it; prices are
 worked out each time it opens.
-If LBK turns on invoices and payments for you, it keeps a copy of your LBK invoices, the items on
-them, your payments and credits, refreshed about every hour and deleted when LBK turns it off.
+If LBK turns on invoices and payments for you, it keeps a copy of the invoices on your LBK projects,
+the items on them and the payments and credits for them, refreshed about every hour and deleted when LBK turns it off.
 It never stores passwords, card or bank numbers, or your conversations. LBK staff use this to support your
 access and improve product recommendations. Full details: https://www.lbksf.com/connect/privacy
 

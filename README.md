@@ -8,8 +8,8 @@ showroom:
 - **Products**: search by SKU, model number or description, with specs and manufacturer list price
 - **Add to quote**: when LBK turns it on for you, ask your assistant to add a product to one of your
   quotes. LBK reviews it and sends an updated quote
-- **Invoices and payments**: when LBK turns them on for you, your invoices, the items on them and
-  your payments, with a PDF or Excel file of everything
+- **Invoices and payments**: when LBK turns them on for you, the invoices on your LBK projects, the items
+  on them and your payments, with a PDF or Excel file of everything
 
 Access is by invitation and read-only, except add-to-quote requests, which LBK reviews before
 anything changes on your quote. Your LBK contact turns access on for your email and chooses which
