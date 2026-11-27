@@ -9,6 +9,7 @@ instead of emailing the showroom.
 - **Your quotes and jobs**: read your own LBK jobs and published quotes, room by room: line items,
   the prices LBK quoted you, status, approvals, valid-until dates and earlier versions.
 - **Export a quote**: as an LBK PDF, a Studio Designer import file, or an Excel file for Programa.
+- **Update Studio Designer**: when LBK revises a quote, get only what changed, with a web page per changed item for Studio Capture.
 - **Spec sheets and installation instructions**: a link you can pass to your contractor. It opens a
   page with each room's products and their documents, the whole PDF and a PDF per room. No prices.
 - **Quote pages for your clients**: turn one of your LBK quotes into your own page for your client,
@@ -62,6 +63,8 @@ The connector keeps your access (email, name, firm and the jobs LBK shared with 
 each request your assistant makes to it, your product searches, and short-lived sign-in records.
 A spec sheets link you make (its page, PDFs, documents and small product pictures) is kept for 90
 days, and anyone with the link can open it.
+A Studio Designer update file comes with an LBK page for each changed or new item, which shows your price
+for that item; anyone with its link can open it for 90 days while your access is on.
 A quote page you make keeps its settings (which quote, your markup and display choices) until about
 90 days after its link expires, or until you delete it. Anyone with its link can open it; prices are
 worked out each time it opens.
